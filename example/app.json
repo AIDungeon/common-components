@@ -1,0 +1,22 @@
+{
+  "name": "@latitude/common-components-example",
+  "displayName": "CommonComponents Example",
+  "expo": {
+    "name": "@latitude/common-components-example",
+    "slug": "latitude-common-components-example",
+    "description": "Example app for @latitude/common-components",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
