@@ -1,12 +1,7 @@
 import React from 'react'
-import {
-  Switch,
-  Text,
-  View,
-  ViewStyle,
-  TextStyle,
-  StyleSheet,
-} from 'react-native'
+import { Switch, Text, View } from 'react-native'
+
+import styles from '../styles/Styles'
 
 interface Props {
   label?: string
@@ -37,31 +32,5 @@ const SwitchField: React.FC<Props> = (props) => {
     </View>
   )
 }
-
-interface Style {
-  container: ViewStyle
-  labelText: TextStyle
-  infoText: TextStyle
-}
-
-const styles = StyleSheet.create<Style>({
-  container: {
-    width: '100%',
-    marginBottom: 45,
-    alignItems: 'flex-start',
-  },
-  labelText: {
-    fontFamily: 'HelveticaNeueMedium',
-    fontSize: 24,
-    color: 'black',
-    marginBottom: 5,
-  },
-  infoText: {
-    color: 'grey',
-    fontFamily: 'HelveticaNeueMedium',
-    fontSize: 12,
-    marginBottom: 10,
-  },
-})
 
 export default SwitchField
