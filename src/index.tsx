@@ -1,3 +1,3 @@
-import SliderField from './slider/SliderField';
+import SwitchField from './switch/SwitchField'
 
-export { SliderField };
+export { SwitchField }
