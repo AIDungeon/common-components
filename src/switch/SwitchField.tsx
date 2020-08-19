@@ -1,12 +1,13 @@
 import React from 'react'
 import { Switch, Text, View } from 'react-native'
 
-import styles from '../styles/Styles'
+import type { UserText } from 'src/styles/StyleTypes'
 
 interface Props {
   label?: string
   info?: string
   value?: boolean
+  userText?: UserText
   onChange?(value?: boolean): void
 }
 
@@ -14,13 +15,9 @@ const SwitchField: React.FC<Props> = (props) => {
   const { label, info, value, onChange } = props
 
   return (
-    <View style={styles.container}>
-      <Text accessible={true} style={styles.labelText}>
-        {label}
-      </Text>
-      <Text accessible={true} style={styles.infoText}>
-        {info}
-      </Text>
+    <View>
+      <Text accessible={true}>{label}</Text>
+      <Text accessible={true}>{info}</Text>
 
       <Switch
         accessibilityLabel={label}

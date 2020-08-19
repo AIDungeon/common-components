@@ -1,10 +1,5 @@
-import { ViewStyle, TextStyle, StyleSheet } from 'react-native'
-
-interface Style {
-  container: ViewStyle
-  labelText: TextStyle
-  infoText: TextStyle
-}
+import { StyleSheet } from 'react-native'
+import type { Style } from './StyleTypes'
 
 const styles = StyleSheet.create<Style>({
   container: {
@@ -26,4 +21,6 @@ const styles = StyleSheet.create<Style>({
   },
 })
 
-export default styles
+export default {
+  styles,
+}
