@@ -1,26 +1,20 @@
-import { StyleSheet } from 'react-native'
 import type { Style } from './StyleTypes'
+import { StyleSheet } from 'react-native'
+import { dmt } from './text/DarkMode'
+import { lmt } from './text/LightMode'
 
-const styles = StyleSheet.create<Style>({
+const containerStyle: Style = StyleSheet.create<Style>({
   container: {
     width: '100%',
     marginBottom: 45,
     alignItems: 'flex-start',
   },
-  labelText: {
-    fontFamily: 'HelveticaNeueMedium',
-    fontSize: 24,
-    color: 'black',
-    marginBottom: 5,
-  },
-  infoText: {
-    color: 'grey',
-    fontFamily: 'HelveticaNeueMedium',
-    fontSize: 12,
-    marginBottom: 10,
-  },
 })
 
-export default {
-  styles,
+const getStyles = (mode: string = 'dark'): Style => {
+  const textStyle = mode === 'light' ? lmt : dmt
+
+  return { ...textStyle, ...containerStyle }
 }
+
+export { getStyles }

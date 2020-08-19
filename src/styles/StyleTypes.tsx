@@ -1,9 +1,9 @@
 import type { ViewStyle, TextStyle } from 'react-native'
 
 export interface Style {
-  container: ViewStyle
-  labelText: TextStyle
-  infoText: TextStyle
+  container?: ViewStyle
+  primaryText?: TextStyle
+  secondaryText?: TextStyle
 }
 
 export interface UserDisplay {
