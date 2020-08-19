@@ -8,6 +8,8 @@ export default function App() {
       label="label"
       info="info"
       value={toggle}
+      mode="light"
+      color="amber"
       onChange={(value: boolean) => {
         setToggle(value)
       }}
