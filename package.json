@@ -25,9 +25,9 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepare": "bob build",
     "release": "release-it",
-    "example": "yarn --cwd example",
+    "example": "cd example && npm run",
     "pods": "cd example && pod-install --quiet",
-    "bootstrap": "yarn example && yarn && yarn pods",
+    "bootstrap": "npm run example && npm install && npm run pods",
     "esfix": "eslint \"**/*.{js,ts,tsx}\" --fix"
   },
   "keywords": [
@@ -35,7 +35,10 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/AIDungeon/common-components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AIDungeon/common-components.git"
+  },
   "author": "Squibs <Zachary.t.walton@gmail.com> (https://github.com/InvaderSquibs)",
   "license": "MIT",
   "bugs": {
@@ -77,7 +80,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint && yarn typescript"
+      "pre-commit": "npm run lint && npm run typescript"
     }
   },
   "commitlint": {
@@ -143,5 +146,12 @@
       "module",
       "typescript"
     ]
+  },
+  "dependencies": {
+    "expo": "^38.0.9"
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib"
   }
 }
