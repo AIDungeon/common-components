@@ -5,13 +5,13 @@ common components
 ## Installation
 
 ```sh
-npm install @latitude/common-components
+npm install latitude-common-components
 ```
 
 ## Usage
 
 ```js
-import CommonComponents from "@latitude/common-components";
+import CommonComponents from "latitude-common-components";
 
 // ...
 
