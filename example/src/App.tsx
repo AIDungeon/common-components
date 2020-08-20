@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { SwitchField } from '@latitude/common-components'
+import { SwitchField } from 'latitude-common-components'
 
 export default function App() {
   const [toggle, setToggle] = useState(true)
