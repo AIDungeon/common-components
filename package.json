@@ -1,5 +1,5 @@
 {
-  "name": "@latitude/common-components",
+  "name": "latitude-common-components",
   "version": "0.0.1",
   "description": "common components",
   "main": "lib/commonjs/index",
