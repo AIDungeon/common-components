@@ -1,6 +1,6 @@
 {
   "name": "@latitude/common-components",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "common components",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -23,7 +23,7 @@
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build",
+    "build": "bob build",
     "release": "release-it",
     "example": "cd example && npm run",
     "pods": "cd example && pod-install --quiet",
@@ -40,7 +40,7 @@
     "url": "git+https://github.com/AIDungeon/common-components.git"
   },
   "author": "Squibs <Zachary.t.walton@gmail.com> (https://github.com/InvaderSquibs)",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/AIDungeon/common-components/issues"
   },
@@ -63,6 +63,7 @@
     "prettier": "^2.0.5",
     "react": "16.11.0",
     "react-native": "0.62.2",
+    "react-native-switch": "^2.0.0",
     "release-it": "^13.5.8",
     "typescript": "^3.8.3"
   },

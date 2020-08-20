@@ -1,19 +1,10 @@
 import React from 'react'
-import { Switch, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
+import { Switch } from 'react-native-switch'
 
 import { getStyles } from '../styles/Styles'
 import getColors from '../styles/colors/Colors'
 import type { UserText } from 'src/styles/StyleTypes'
-
-interface Props {
-  label?: string
-  info?: string
-  value?: boolean
-  userText?: UserText
-  mode?: string
-  color?: string
-  onChange?(value?: boolean): void
-}
 
 const SwitchField: React.FC<Props> = (props) => {
   const { label, info, value, onChange, mode, color } = props
@@ -30,10 +21,10 @@ const SwitchField: React.FC<Props> = (props) => {
       </Text>
 
       <Switch
-        accessibilityLabel={label}
-        trackColor={{ true: colors.primaryFaded, false: '#DDDDDD' }}
-        thumbColor={value ? colors.primary : '#888888'}
-        ios_backgroundColor={value ? colors.primaryFaded : ''}
+        backgroundActive={colors.primaryFaded}
+        backgroundInactive="#DDDDDD"
+        circleActiveColor={colors.primary}
+        circleBorderInactiveColor="#999999"
         onValueChange={onChange}
         value={value}
       />
@@ -42,3 +33,13 @@ const SwitchField: React.FC<Props> = (props) => {
 }
 
 export default SwitchField
+
+interface Props {
+  label?: string
+  info?: string
+  value?: boolean
+  userText?: UserText
+  mode?: string
+  color?: string
+  onChange?(value?: boolean): void
+}
