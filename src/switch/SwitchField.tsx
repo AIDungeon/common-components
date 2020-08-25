@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Text, View } from 'react-native'
 
 import { getStyles } from '../styles/Styles'
-import getColors from '../styles/colors/Colors'
+import { getColors } from '../styles/colors/Colors'
 
 export interface SwitchFieldProps {
   label?: string

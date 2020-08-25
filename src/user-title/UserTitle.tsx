@@ -2,6 +2,8 @@ import React from 'react'
 import { TouchableOpacity, Text, ImageURISource } from 'react-native'
 import { Avatar } from 'react-native-elements'
 
+import { getColors, getTextColors } from '../styles/colors/Colors'
+
 export interface UserTitleProps {
   username: string
   avatarSource?: ImageURISource
@@ -12,12 +14,31 @@ export interface UserTitleProps {
 }
 
 const UserTitle: React.FC<UserTitleProps> = (props) => {
-  const { avatarSource, username, onPress } = props
+  const { avatarSource, username, onPress, color, mode } = props
+
+  const colors = getColors(color)
+  const textColors = getTextColors(mode)
 
   return (
     <TouchableOpacity onPress={onPress} accessibilityLabel="Profile" accessibilityRole="button">
-      {!!avatarSource && <Avatar rounded size="small" source={avatarSource} />}
-      {!avatarSource && <Avatar rounded size="small" title={username?.charAt(0).toUpperCase()} />}
+      {!!avatarSource && (
+        <Avatar
+          rounded
+          size="small"
+          source={avatarSource}
+          containerStyle={{ backgroundColor: colors.primary }}
+          titleStyle={{ color: textColors.primary }}
+        />
+      )}
+      {!avatarSource && (
+        <Avatar
+          rounded
+          size="small"
+          title={username?.charAt(0).toUpperCase()}
+          containerStyle={{ backgroundColor: colors.primary }}
+          titleStyle={{ color: textColors.primary }}
+        />
+      )}
 
       <Text>{username}</Text>
       {/* type === 'supporter' && (

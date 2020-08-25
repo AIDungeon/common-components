@@ -6,7 +6,9 @@ import OceanTheme from './Ocean'
 import PurpleTheme from './Purple'
 import SunsetTheme from './Sunset'
 import TerminalTheme from './Terminal'
-import type { Color } from './ColorTypes'
+import DarkText from './DarkText'
+import LightText from './LightText'
+import type { Color, TextColor } from './ColorTypes'
 
 const getColors = (color?: string): Color => {
   switch (color) {
@@ -31,4 +33,8 @@ const getColors = (color?: string): Color => {
   }
 }
 
-export default getColors
+const getTextColors = (mode?: string): TextColor => {
+  return mode === 'dark' ? DarkText : LightText
+}
+
+export { getColors, getTextColors }
