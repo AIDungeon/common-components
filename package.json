@@ -28,7 +28,9 @@
     "example": "cd example && npm run",
     "pods": "cd example && pod-install --quiet",
     "bootstrap": "npm run example && npm install && npm run pods",
-    "esfix": "eslint \"**/*.{js,ts,tsx}\" --fix"
+    "esfix": "eslint \"**/*.{js,ts,tsx}\" --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "keywords": [
     "react-native",
@@ -51,10 +53,15 @@
     "@react-native-community/bob": "^0.16.2",
     "@react-native-community/eslint-config": "^2.0.0",
     "@release-it/conventional-changelog": "^1.1.4",
+    "@storybook/addon-actions": "^6.0.18",
+    "@storybook/addon-essentials": "^6.0.18",
+    "@storybook/addon-links": "^6.0.18",
+    "@storybook/react": "^6.0.18",
     "@types/jest": "^26.0.0",
     "@types/react": "^16.9.19",
     "@types/react-native": "^0.63.8",
     "babel-loader": "^8.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
     "commitlint": "^8.3.5",
     "core-js": "^3.6.5",
     "eslint": "^7.2.0",
@@ -65,8 +72,10 @@
     "pod-install": "^0.1.0",
     "prettier": "^2.0.5",
     "react": "16.11.0",
+    "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
     "react-native": "0.62.2",
+    "react-native-web": "^0.13.8",
     "release-it": "^13.5.8",
     "typescript": "^3.8.3"
   },
@@ -151,11 +160,9 @@
       "typescript"
     ]
   },
-  "dependencies": {
-    "expo": "^38.0.9"
-  },
   "directories": {
     "example": "example",
     "lib": "lib"
-  }
+  },
+  "dependencies": {}
 }
