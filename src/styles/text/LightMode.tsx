@@ -1,16 +1,17 @@
 import { StyleSheet } from 'react-native'
 import type { Style } from '../StyleTypes'
 import { fontSizes } from './FontSizes'
+import LightText from '../colors/LightText'
 
 const lmt: Style = StyleSheet.create<Style>({
   primaryText: {
-    color: '#000000',
+    color: LightText.primary,
     fontFamily: 'HelveticaNeueMedium',
     fontSize: fontSizes.large,
     marginBottom: 5,
   },
   secondaryText: {
-    color: '#999999',
+    color: LightText.secondary,
     fontFamily: 'HelveticaNeueMedium',
     fontSize: fontSizes.medium,
     marginBottom: 10,
