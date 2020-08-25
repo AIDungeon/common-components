@@ -11,6 +11,15 @@ export default {
 
 const Template: Story<SwitchFieldProps> = (args) => <SwitchField {...args} />
 
+export const DarkTheme = Template.bind({})
+DarkTheme.args = {
+  label: 'Light Theme Label',
+  info: 'info text for the light theme',
+  value: true,
+  mode: 'dark',
+  color: 'terminal',
+}
+
 export const LightTheme = Template.bind({})
 LightTheme.args = {
   label: 'Light Theme Label',
