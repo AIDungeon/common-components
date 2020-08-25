@@ -15,7 +15,6 @@ export interface UserTitleProps {
 
 const UserTitle: React.FC<UserTitleProps> = (props) => {
   const { avatarSource, username, onPress, color, mode } = props
-
   const colors = getColors(color)
   const textColors = getTextColors(mode)
 

@@ -2,29 +2,25 @@ import React from 'react'
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import type { Story, Meta } from '@storybook/react/types-6-0'
 
-import { SwitchField, SwitchFieldProps } from '../switch/SwitchField'
+import { UserTitle, UserTitleProps } from './UserTitle'
 
 export default {
-  title: 'Example/Card',
-  component: SwitchField,
+  title: 'Example/UserTitle',
+  component: UserTitle,
 } as Meta
 
-const Template: Story<SwitchFieldProps> = (args) => <SwitchField {...args} />
+const Template: Story<UserTitleProps> = (args) => <UserTitle {...args} />
 
 export const DarkTheme = Template.bind({})
 DarkTheme.args = {
-  label: 'Light Theme Label',
-  info: 'info text for the light theme',
-  value: true,
+  username: 'Squibs',
+  avatarSource: { uri: 'https://aidungeon-images.s3.us-east-2.amazonaws.com/portraits/contrib1.png' },
   mode: 'dark',
-  color: 'terminal',
 }
 
 export const LightTheme = Template.bind({})
 LightTheme.args = {
-  label: 'Light Theme Label',
-  info: 'info text for the light theme',
-  value: true,
+  username: 'Squibs',
+  avatarSource: { uri: 'https://aidungeon-images.s3.us-east-2.amazonaws.com/portraits/contrib1.png' },
   mode: 'light',
-  color: 'terminal',
 }
