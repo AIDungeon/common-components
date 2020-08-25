@@ -3,19 +3,17 @@ import { Switch, Text, View } from 'react-native'
 
 import { getStyles } from '../styles/Styles'
 import getColors from '../styles/colors/Colors'
-import type { UserText } from 'src/styles/StyleTypes'
 
-interface Props {
+export interface SwitchFieldProps {
   label?: string
   info?: string
   value?: boolean
-  userText?: UserText
   mode?: string
   color?: string
   onChange?(value?: boolean): void
 }
 
-const SwitchField: React.FC<Props> = (props) => {
+const SwitchField: React.FC<SwitchFieldProps> = (props) => {
   const { label, info, value, onChange, mode, color } = props
   const styles = getStyles(mode)
   const colors = getColors(color)
@@ -41,4 +39,4 @@ const SwitchField: React.FC<Props> = (props) => {
   )
 }
 
-export default SwitchField
+export { SwitchField }
