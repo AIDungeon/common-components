@@ -2,8 +2,6 @@ import React from 'react'
 import { TouchableOpacity, Text, ImageURISource } from 'react-native'
 import { Avatar } from 'react-native-elements'
 
-import { getStyles } from '../styles/Styles'
-
 export interface UserTitleProps {
   username: string
   avatarSource?: ImageURISource
@@ -14,36 +12,14 @@ export interface UserTitleProps {
 }
 
 const UserTitle: React.FC<UserTitleProps> = (props) => {
-  const { avatarSource, username, onPress, mode } = props
-  const styles = getStyles(mode)
+  const { avatarSource, username, onPress } = props
 
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      style={styles.userContainer}
-      accessibilityLabel="Profile"
-      accessibilityRole="button"
-    >
-      {!!avatarSource && (
-        <Avatar
-          rounded
-          size="small"
-          source={avatarSource}
-          containerStyle={{ backgroundColor: styles.userTheme.primary }}
-          titleStyle={{ color: styles.userTheme.text }}
-        />
-      )}
-      {!avatarSource && (
-        <Avatar
-          rounded
-          size="small"
-          title={username?.charAt(0).toUpperCase()}
-          containerStyle={{ backgroundColor: styles.userTheme.primary }}
-          titleStyle={{ color: styles.userTheme.text }}
-        />
-      )}
+    <TouchableOpacity onPress={onPress} accessibilityLabel="Profile" accessibilityRole="button">
+      {!!avatarSource && <Avatar rounded size="small" source={avatarSource} />}
+      {!avatarSource && <Avatar rounded size="small" title={username?.charAt(0).toUpperCase()} />}
 
-      <Text style={styles.usernameText}>{username}</Text>
+      <Text>{username}</Text>
       {/* type === 'supporter' && (
         <Icon name="medal" size={20} color={styles.userTheme.primary} style={{ marginLeft: 5 }} />
       )}
