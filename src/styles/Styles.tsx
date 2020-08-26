@@ -2,6 +2,7 @@ import type { Style } from './StyleTypes'
 import { StyleSheet } from 'react-native'
 import { dmt } from './text/DarkMode'
 import { lmt } from './text/LightMode'
+import { avatar } from './spacing/Avatar'
 
 const containerStyle: Style = StyleSheet.create<Style>({
   container: {
@@ -17,4 +18,8 @@ const getStyles = (mode: string = 'dark'): Style => {
   return { ...textStyle, ...containerStyle }
 }
 
-export { getStyles }
+const styles = {
+  ...avatar,
+}
+
+export { getStyles, styles }

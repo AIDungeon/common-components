@@ -2,6 +2,7 @@ import type { ViewStyle, TextStyle } from 'react-native'
 
 export interface Style {
   container?: ViewStyle
+  avatarContainer?: ViewStyle
   primaryTextXLarge?: TextStyle
   primaryTextLarge?: TextStyle
   primaryTextMedium?: TextStyle
