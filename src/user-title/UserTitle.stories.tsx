@@ -13,7 +13,11 @@ export default {
 const Template: Story<UserTitleProps> = (args) => {
   return (
     <>
-      <UserTitle {...args} userType="dev" />
+      <UserTitle
+        {...args}
+        userType="dev"
+        avatarSource={{ uri: 'https://aidungeon-images.s3.us-east-2.amazonaws.com/portraits/contrib1.png' }}
+      />
       <View style={{ marginTop: 30 }} />
       <UserTitle {...args} userType="subscriber" />
       <View style={{ marginTop: 30 }} />
@@ -25,7 +29,6 @@ const Template: Story<UserTitleProps> = (args) => {
 export const DarkTheme = Template.bind({})
 DarkTheme.args = {
   username: 'Squibs',
-  avatarSource: { uri: 'https://aidungeon-images.s3.us-east-2.amazonaws.com/portraits/contrib1.png' },
   mode: 'dark',
 }
 DarkTheme.parameters = {
@@ -35,6 +38,5 @@ DarkTheme.parameters = {
 export const LightTheme = Template.bind({})
 LightTheme.args = {
   username: 'Squibs',
-  avatarSource: { uri: 'https://aidungeon-images.s3.us-east-2.amazonaws.com/portraits/contrib1.png' },
   mode: 'light',
 }

@@ -3,8 +3,9 @@ import { TouchableOpacity, Text, ImageURISource, View } from 'react-native'
 import { Avatar } from 'react-native-elements'
 
 import { styles, getStyles } from '../styles/Styles'
-import { getColors, getTextColors } from '../styles/colors/Colors'
+import { getColors } from '../styles/colors/Colors'
 import { Icon } from '../icon/Icon'
+import DarkText from '../styles/colors/DarkText'
 
 export interface UserTitleProps {
   username: string
@@ -19,7 +20,6 @@ const UserTitle: React.FC<UserTitleProps> = (props) => {
   const { avatarSource, username, onPress, color, mode, userType } = props
   const colors = getColors(color)
   const textStyles = getStyles(mode)
-  const textColors = getTextColors(mode)
   const iconName = userType === 'dev' ? 'crown' : 'medal'
 
   return (
@@ -36,7 +36,7 @@ const UserTitle: React.FC<UserTitleProps> = (props) => {
             size="small"
             source={avatarSource}
             containerStyle={{ backgroundColor: colors.primary }}
-            titleStyle={{ color: textColors.primary }}
+            titleStyle={{ color: DarkText.primary }}
           />
         </View>
       )}
@@ -47,7 +47,7 @@ const UserTitle: React.FC<UserTitleProps> = (props) => {
             size="small"
             title={username?.charAt(0).toUpperCase()}
             containerStyle={{ backgroundColor: colors.primary }}
-            titleStyle={{ color: textColors.primary }}
+            titleStyle={{ color: DarkText.primary }}
           />
         </View>
       )}

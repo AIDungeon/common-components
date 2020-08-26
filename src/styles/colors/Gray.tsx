@@ -1,8 +1,8 @@
 import type { Color } from './ColorTypes'
 
 const GrayTheme: Color = {
-  primary: '#111111',
-  primaryFaded: '#11111155',
+  primary: '#707070',
+  primaryFaded: '#70707055',
 }
 
 export default GrayTheme
