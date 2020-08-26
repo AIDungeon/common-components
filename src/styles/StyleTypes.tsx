@@ -1,6 +1,7 @@
 import type { ViewStyle, TextStyle } from 'react-native'
 
 export interface Style {
+  icon?: ViewStyle
   container?: ViewStyle
   avatarContainer?: ViewStyle
   flexContainer?: ViewStyle

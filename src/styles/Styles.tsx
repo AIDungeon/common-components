@@ -4,6 +4,7 @@ import { dmt } from './text/DarkMode'
 import { lmt } from './text/LightMode'
 import { avatar } from './spacing/Avatar'
 import { row } from './flex/Row'
+import { icon } from './text/Icon'
 
 const containerStyle: Style = StyleSheet.create<Style>({
   container: {
@@ -22,6 +23,7 @@ const getStyles = (mode: string = 'dark'): Style => {
 const styles = {
   ...avatar,
   ...row,
+  ...icon,
 }
 
 export { getStyles, styles }
