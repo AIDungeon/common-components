@@ -22,7 +22,6 @@ const UserTitle: React.FC<UserTitleProps> = (props) => {
   const textStyles = getStyles(mode)
   const iconName = userType === 'dev' ? 'crown' : 'medal'
 
-  console.log({ space: 'userTitle', color, mode, colors, textStyles, DarkText })
   return (
     <TouchableOpacity
       style={styles.flexContainer}

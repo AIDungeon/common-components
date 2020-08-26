@@ -20,8 +20,6 @@ const Icon: React.FC<IconProps> = (props) => {
   const textColors = getTextColors(mode)
   const iconColor = color || textColors.primary
 
-  console.log({ iconColor, color })
-
   return (
     <NativeIcon
       name={iconName}
