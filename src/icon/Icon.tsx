@@ -9,16 +9,19 @@ export interface IconProps {
   mode: string
   type?: string
   color?: string
+  size?: number
 }
 
 const Icon: React.FC<IconProps> = (props) => {
-  const { iconName, type, mode, color } = props
+  const { iconName, type, mode, color, size } = props
 
   const textColors = getTextColors(mode)
   const colors = getColors(color)
   const iconColor = color ? colors.primary : textColors.primary
 
-  return <NativeIcon name={iconName} color={iconColor} type={type || 'material-community'} style={styles.icon} />
+  return (
+    <NativeIcon name={iconName} color={iconColor} type={type || 'material-community'} style={styles.icon} size={size} />
+  )
 }
 
 export { Icon }

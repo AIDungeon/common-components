@@ -4,21 +4,23 @@ import { Avatar } from 'react-native-elements'
 
 import { styles, getStyles } from '../styles/Styles'
 import { getColors, getTextColors } from '../styles/colors/Colors'
+import { Icon } from '../icon/Icon'
 
 export interface UserTitleProps {
   username: string
   avatarSource?: ImageURISource
+  mode: string
   onPress?: () => void
   type?: string
   color?: string
-  mode?: string
 }
 
 const UserTitle: React.FC<UserTitleProps> = (props) => {
-  const { avatarSource, username, onPress, color, mode } = props
+  const { avatarSource, username, onPress, color, mode, type } = props
   const colors = getColors(color)
   const textStyles = getStyles(mode)
   const textColors = getTextColors(mode)
+  const iconName = type === 'dev' ? 'crown' : 'medal'
 
   return (
     <TouchableOpacity
@@ -51,10 +53,7 @@ const UserTitle: React.FC<UserTitleProps> = (props) => {
       )}
 
       <Text style={textStyles.primaryTextMedium}>{username}</Text>
-      {/* type === 'supporter' && (
-        <Icon name="medal" size={20} color={styles.userTheme.primary} style={{ marginLeft: 5 }} />
-      )}
-      {type === 'dev' && <Icon name="crown" size={20} color={styles.userTheme.primary} style={{ marginLeft: 5 }} /> */}
+      <Icon mode={mode} iconName={iconName} size={20} color={colors.primary} />
     </TouchableOpacity>
   )
 }
