@@ -9,15 +9,25 @@ export default {
   component: SwitchField,
 } as Meta
 
-const Template: Story<SwitchFieldProps> = (args) => <SwitchField {...args} />
+const Template: Story<SwitchFieldProps> = (args) => {
+  return (
+    <>
+      <SwitchField {...args} />
+      <SwitchField {...args} value={false} />
+    </>
+  )
+}
 
 export const DarkTheme = Template.bind({})
 DarkTheme.args = {
-  label: 'Light Theme Label',
-  info: 'info text for the light theme',
+  label: 'Dark Theme Label',
+  info: 'info text for the dark theme',
   value: true,
   mode: 'dark',
   color: 'terminal',
+}
+DarkTheme.parameters = {
+  backgrounds: { default: 'DarkMode' },
 }
 
 export const LightTheme = Template.bind({})

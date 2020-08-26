@@ -17,6 +17,9 @@ DarkTheme.args = {
   avatarSource: { uri: 'https://aidungeon-images.s3.us-east-2.amazonaws.com/portraits/contrib1.png' },
   mode: 'dark',
 }
+DarkTheme.parameters = {
+  backgrounds: { default: 'DarkMode' },
+}
 
 export const LightTheme = Template.bind({})
 LightTheme.args = {
