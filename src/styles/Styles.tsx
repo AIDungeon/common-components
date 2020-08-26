@@ -5,6 +5,7 @@ import { lmt } from './text/LightMode'
 import { avatar } from './spacing/Avatar'
 import { row } from './flex/Row'
 import { icon } from './text/Icon'
+import { textSpacing } from './spacing/Text'
 
 const containerStyle: Style = StyleSheet.create<Style>({
   container: {
@@ -24,6 +25,7 @@ const styles = {
   ...avatar,
   ...row,
   ...icon,
+  ...textSpacing,
 }
 
 export { getStyles, styles }

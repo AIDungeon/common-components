@@ -5,6 +5,8 @@ export interface Style {
   container?: ViewStyle
   avatarContainer?: ViewStyle
   flexContainer?: ViewStyle
+  textSpacingSmall?: TextStyle
+  textSpacingMedium?: TextStyle
   primaryTextXLarge?: TextStyle
   primaryTextLarge?: TextStyle
   primaryTextMedium?: TextStyle

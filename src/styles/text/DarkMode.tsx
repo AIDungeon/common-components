@@ -6,12 +6,10 @@ import DarkText from '../colors/DarkText'
 const primaryText = {
   color: DarkText.primary,
   fontFamily: 'HelveticaNeueMedium',
-  marginBottom: 5,
 }
 const secondaryText = {
   color: DarkText.secondary,
   fontFamily: 'HelveticaNeueMedium',
-  marginBottom: 10,
 }
 
 const dmt: Style = StyleSheet.create<Style>({

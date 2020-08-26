@@ -6,12 +6,10 @@ import LightText from '../colors/LightText'
 const primaryText = {
   color: LightText.primary,
   fontFamily: 'HelveticaNeueMedium',
-  marginBottom: 5,
 }
 const secondaryText = {
   color: LightText.secondary,
   fontFamily: 'HelveticaNeueMedium',
-  marginBottom: 10,
 }
 
 const lmt: Style = StyleSheet.create<Style>({

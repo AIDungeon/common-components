@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Text, View } from 'react-native'
 
-import { getStyles } from '../styles/Styles'
+import { getStyles, styles } from '../styles/Styles'
 import { getColors } from '../styles/colors/Colors'
 
 export interface SwitchFieldProps {
@@ -15,15 +15,15 @@ export interface SwitchFieldProps {
 
 const SwitchField: React.FC<SwitchFieldProps> = (props) => {
   const { label, info, value, onChange, mode, color } = props
-  const styles = getStyles(mode)
+  const textStyles = getStyles(mode)
   const colors = getColors(color)
 
   return (
     <View style={styles.container}>
-      <Text accessible={true} style={styles.primaryTextLarge}>
+      <Text accessible={true} style={[textStyles.primaryTextLarge, styles.textSpacingSmall]}>
         {label}
       </Text>
-      <Text accessible={true} style={styles.secondaryTextMedium}>
+      <Text accessible={true} style={[textStyles.secondaryTextMedium, styles.textSpacingMedium]}>
         {info}
       </Text>
 
