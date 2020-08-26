@@ -53,7 +53,7 @@ const UserTitle: React.FC<UserTitleProps> = (props) => {
       )}
 
       <Text style={textStyles.primaryTextMedium}>{username}</Text>
-      <Icon mode={mode} iconName={iconName} size={20} color={colors.primary} />
+      <Icon mode={mode} iconName={iconName} size={20} color={colors.primary} style={{ marginLeft: 5 }} />
     </TouchableOpacity>
   )
 }

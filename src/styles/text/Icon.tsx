@@ -7,7 +7,6 @@ const icon: Style = StyleSheet.create<Style>({
     fontSize: fontSizes.iconButton,
     textAlign: 'center',
     width: 40,
-    padding: 8,
   },
 })
 
