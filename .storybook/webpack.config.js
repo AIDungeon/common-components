@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = async ({ config, mode }) => {
   config.module.rules.push(
@@ -23,14 +22,12 @@ module.exports = async ({ config, mode }) => {
         }
       }
     },
-    // loader for png
     {
       test: /\.(gif|jpe?g|png|svg)$/,
       use: {
         loader: 'file-loader',
       }
     },
-    // loader for font icons
     {
       test: /\.ttf$/,
       loader: 'url-loader',
