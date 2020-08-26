@@ -30,6 +30,7 @@ export const DarkTheme = Template.bind({})
 DarkTheme.args = {
   username: 'Squibs',
   mode: 'dark',
+  color: 'gray',
 }
 DarkTheme.parameters = {
   backgrounds: { default: 'DarkMode' },
@@ -39,4 +40,5 @@ export const LightTheme = Template.bind({})
 LightTheme.args = {
   username: 'Squibs',
   mode: 'light',
+  color: 'gray',
 }
