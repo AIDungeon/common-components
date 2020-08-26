@@ -20,10 +20,10 @@ const SwitchField: React.FC<SwitchFieldProps> = (props) => {
 
   return (
     <View style={styles.container}>
-      <Text accessible={true} style={styles.primaryText}>
+      <Text accessible={true} style={styles.primaryTextLarge}>
         {label}
       </Text>
-      <Text accessible={true} style={styles.secondaryText}>
+      <Text accessible={true} style={styles.secondaryTextMedium}>
         {info}
       </Text>
 

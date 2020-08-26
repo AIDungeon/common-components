@@ -3,18 +3,57 @@ import type { Style } from '../StyleTypes'
 import { fontSizes } from './FontSizes'
 import LightText from '../colors/LightText'
 
+const primaryText = {
+  color: LightText.primary,
+  fontFamily: 'HelveticaNeueMedium',
+  marginBottom: 5,
+}
+const secondaryText = {
+  color: LightText.secondary,
+  fontFamily: 'HelveticaNeueMedium',
+  marginBottom: 10,
+}
+
 const lmt: Style = StyleSheet.create<Style>({
-  primaryText: {
-    color: LightText.primary,
-    fontFamily: 'HelveticaNeueMedium',
-    fontSize: fontSizes.large,
-    marginBottom: 5,
+  primaryTextXLarge: {
+    ...primaryText,
+    fontSize: fontSizes.xLarge,
   },
-  secondaryText: {
-    color: LightText.secondary,
-    fontFamily: 'HelveticaNeueMedium',
+  primaryTextLarge: {
+    ...primaryText,
+    fontSize: fontSizes.large,
+  },
+  primaryTextMedium: {
+    ...primaryText,
     fontSize: fontSizes.medium,
-    marginBottom: 10,
+  },
+  primaryTextSmall: {
+    ...primaryText,
+    fontSize: fontSizes.small,
+  },
+  primaryTextXSmall: {
+    ...primaryText,
+    fontSize: fontSizes.xSmall,
+  },
+  secondaryTextXLarge: {
+    ...secondaryText,
+    fontSize: fontSizes.xLarge,
+  },
+  secondaryTextLarge: {
+    ...secondaryText,
+    fontSize: fontSizes.large,
+  },
+  secondaryTextMedium: {
+    ...secondaryText,
+    fontSize: fontSizes.medium,
+  },
+  secondaryTextSmall: {
+    ...secondaryText,
+    fontSize: fontSizes.small,
+  },
+  secondaryTextXSmall: {
+    ...secondaryText,
+    fontSize: fontSizes.xSmall,
   },
 })
 
