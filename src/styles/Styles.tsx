@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native'
 import { dmt } from './text/DarkMode'
 import { lmt } from './text/LightMode'
 import { avatar } from './spacing/Avatar'
+import { row } from './flex/Row'
 
 const containerStyle: Style = StyleSheet.create<Style>({
   container: {
@@ -20,6 +21,7 @@ const getStyles = (mode: string = 'dark'): Style => {
 
 const styles = {
   ...avatar,
+  ...row,
 }
 
 export { getStyles, styles }
