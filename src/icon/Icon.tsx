@@ -2,7 +2,7 @@ import React from 'react'
 import { Icon as NativeIcon } from 'react-native-elements'
 import type { ViewStyle } from 'react-native'
 
-import { getColors, getTextColors } from '../styles/colors/Colors'
+import { getTextColors } from '../styles/colors/Colors'
 import { styles } from '../styles/Styles'
 
 export interface IconProps {
@@ -18,8 +18,9 @@ const Icon: React.FC<IconProps> = (props) => {
   const { iconName, type, mode, color, size } = props
 
   const textColors = getTextColors(mode)
-  const colors = getColors(color)
-  const iconColor = color ? colors.primary : textColors.primary
+  const iconColor = color || textColors.primary
+
+  console.log({ iconColor, color })
 
   return (
     <NativeIcon
