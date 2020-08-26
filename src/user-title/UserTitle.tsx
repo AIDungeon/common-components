@@ -11,16 +11,16 @@ export interface UserTitleProps {
   avatarSource?: ImageURISource
   mode: string
   onPress?: () => void
-  type?: string
+  userType?: string
   color?: string
 }
 
 const UserTitle: React.FC<UserTitleProps> = (props) => {
-  const { avatarSource, username, onPress, color, mode, type } = props
+  const { avatarSource, username, onPress, color, mode, userType } = props
   const colors = getColors(color)
   const textStyles = getStyles(mode)
   const textColors = getTextColors(mode)
-  const iconName = type === 'dev' ? 'crown' : 'medal'
+  const iconName = userType === 'dev' ? 'crown' : 'medal'
 
   return (
     <TouchableOpacity
@@ -53,7 +53,9 @@ const UserTitle: React.FC<UserTitleProps> = (props) => {
       )}
 
       <Text style={textStyles.primaryTextMedium}>{username}</Text>
-      <Icon mode={mode} iconName={iconName} size={20} color={colors.primary} style={{ marginLeft: 5 }} />
+      {!!userType && (
+        <Icon mode={mode} iconName={iconName} size={20} color={colors.primary} style={{ marginLeft: 5 }} />
+      )}
     </TouchableOpacity>
   )
 }
