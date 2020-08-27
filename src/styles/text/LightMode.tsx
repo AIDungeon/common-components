@@ -5,11 +5,11 @@ import LightText from '../colors/LightText'
 
 const primaryText = {
   color: LightText.primary,
-  fontFamily: 'HelveticaNeueMedium',
+  fontFamily: 'HelveticaNeueLight',
 }
 const secondaryText = {
   color: LightText.secondary,
-  fontFamily: 'HelveticaNeueMedium',
+  fontFamily: 'HelveticaNeueLight',
 }
 
 const lmt: Style = StyleSheet.create<Style>({

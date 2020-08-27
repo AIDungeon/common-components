@@ -5,11 +5,11 @@ import DarkText from '../colors/DarkText'
 
 const primaryText = {
   color: DarkText.primary,
-  fontFamily: 'HelveticaNeueMedium',
+  fontFamily: 'HelveticaNeueLight',
 }
 const secondaryText = {
   color: DarkText.secondary,
-  fontFamily: 'HelveticaNeueMedium',
+  fontFamily: 'HelveticaNeueLight',
 }
 
 const dmt: Style = StyleSheet.create<Style>({
