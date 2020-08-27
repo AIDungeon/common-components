@@ -5,7 +5,7 @@ import LightText from '../colors/LightText'
 
 const primaryText = {
   color: LightText.primary,
-  fontFamily: 'HelveticaNeueLight',
+  fontFamily: 'HelveticaNeueMedium',
 }
 const secondaryText = {
   color: LightText.secondary,

@@ -5,7 +5,7 @@ import DarkText from '../colors/DarkText'
 
 const primaryText = {
   color: DarkText.primary,
-  fontFamily: 'HelveticaNeueLight',
+  fontFamily: 'HelveticaNeueMedium',
 }
 const secondaryText = {
   color: DarkText.secondary,
