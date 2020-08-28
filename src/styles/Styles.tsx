@@ -10,7 +10,7 @@ import { textSpacing } from './spacing/Text'
 const containerStyle: Style = StyleSheet.create<Style>({
   container: {
     width: '100%',
-    marginBottom: 45,
+    marginBottom: 32,
     alignItems: 'flex-start',
   },
 })
@@ -26,6 +26,7 @@ const styles = {
   ...row,
   ...icon,
   ...textSpacing,
+  ...containerStyle,
 }
 
 export { getStyles, styles }

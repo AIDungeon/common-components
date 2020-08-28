@@ -1,7 +1,6 @@
 import React from 'react'
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import type { Story, Meta } from '@storybook/react/types-6-0'
-import { View } from 'react-native'
 
 import { SwitchField, SwitchFieldProps } from './SwitchField'
 
@@ -14,7 +13,6 @@ const Template: Story<SwitchFieldProps> = (args) => {
   return (
     <>
       <SwitchField {...args} />
-      <View style={{ marginTop: 60 }} />
       <SwitchField {...args} value={false} />
     </>
   )
