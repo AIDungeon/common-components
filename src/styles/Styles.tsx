@@ -13,6 +13,17 @@ const containerStyle: Style = StyleSheet.create<Style>({
     marginBottom: 32,
     alignItems: 'flex-start',
   },
+  tagContainer: {
+    flexDirection: 'row',
+    borderWidth: 0.5,
+    borderRadius: 20,
+    marginRight: 5,
+    marginBottom: 5,
+    paddingVertical: 3,
+    paddingHorizontal: 7,
+    width: 'fit-content',
+    maxWidth: 200,
+  },
 })
 
 const getStyles = (mode: string = 'dark'): Style => {
@@ -27,6 +38,7 @@ const styles = {
   ...icon,
   ...textSpacing,
   ...containerStyle,
+  ...dmt,
 }
 
 export { getStyles, styles }
