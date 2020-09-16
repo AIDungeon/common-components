@@ -13,12 +13,12 @@ export interface UserTitleProps {
   mode: string
   onPress?: () => void
   userType?: string
-  color?: string
+  theme?: string
 }
 
 const UserTitle: React.FC<UserTitleProps> = (props) => {
-  const { avatarSource, username, onPress, color, mode, userType } = props
-  const colors = getColors(color)
+  const { avatarSource, username, onPress, theme, mode, userType } = props
+  const colors = getColors(theme)
   const textStyles = getStyles(mode)
   const iconName = userType === 'dev' ? 'crown' : 'medal'
 
@@ -53,7 +53,7 @@ const UserTitle: React.FC<UserTitleProps> = (props) => {
       )}
 
       <Text style={textStyles.primaryTextSmall}>{username}</Text>
-      {!!userType && <Icon mode={mode} iconName={iconName} size={20} theme={color} />}
+      {!!userType && <Icon mode={mode} iconName={iconName} size={20} theme={theme} />}
     </TouchableOpacity>
   )
 }
