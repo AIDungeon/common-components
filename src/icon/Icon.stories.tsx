@@ -13,7 +13,7 @@ const Template: Story<IconProps> = (args) => {
   return (
     <>
       <Icon {...args} iconName="pin" />
-      <Icon {...args} iconName="play" type="font-awesome" color="amber" />
+      <Icon {...args} iconName="play" type="font-awesome" theme="terminal" />
     </>
   )
 }

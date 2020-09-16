@@ -7,22 +7,22 @@ export interface IconProps {
   iconName: string
   mode: string
   type?: string
-  color?: string
+  theme?: string
   size?: number
+  color?: string
 }
 
 const Icon: React.FC<IconProps> = (props) => {
-  const { iconName, type, mode, color, size } = props
+  const { iconName, type, mode, theme, color, size } = props
 
-  console.log({ color, mode })
   const textColors = getTextColors(mode)
-  const colors = getColors(color)
-  const iconColor = color ? colors.primary : textColors.primary
+  const colors = getColors(theme)
+  const iconColor = theme ? colors.primary : textColors.primary
 
   return (
     <NativeIcon
       name={iconName}
-      color={iconColor}
+      color={color || iconColor}
       type={type || 'material-community'}
       containerStyle={{ marginLeft: 5, width: 20 }}
       size={size}
