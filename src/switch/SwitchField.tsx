@@ -9,14 +9,14 @@ export interface SwitchFieldProps {
   info?: string
   value?: boolean
   mode?: string
-  color?: string
+  theme?: string
   onChange?(value?: boolean): void
 }
 
 const SwitchField: React.FC<SwitchFieldProps> = (props) => {
-  const { label, info, value, onChange, mode, color } = props
+  const { label, info, value, onChange, mode, theme } = props
   const textStyles = getStyles(mode)
-  const colors = getColors(color)
+  const colors = getColors(theme)
 
   return (
     <View style={styles.container}>

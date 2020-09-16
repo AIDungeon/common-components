@@ -24,7 +24,7 @@ DarkTheme.args = {
   info: 'info text for the dark theme',
   value: true,
   mode: 'dark',
-  color: 'terminal',
+  theme: 'terminal',
 }
 DarkTheme.parameters = {
   backgrounds: { default: 'DarkMode' },
@@ -36,5 +36,5 @@ LightTheme.args = {
   info: 'info text for the light theme',
   value: true,
   mode: 'light',
-  color: 'terminal',
+  theme: 'terminal',
 }
