@@ -6,4 +6,5 @@ export interface Color {
 export interface TextColor {
   primary: string
   secondary: string
+  alert: string
 }

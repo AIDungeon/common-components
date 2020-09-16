@@ -12,7 +12,13 @@ const secondaryText = {
   fontFamily: 'HelveticaNeueLight',
 }
 
+const alertText = {
+  color: LightText.alert,
+  fontFamily: 'HelveticaNeueLight',
+}
+
 const lmt: Style = StyleSheet.create<Style>({
+  primaryText,
   primaryTextXLarge: {
     ...primaryText,
     fontSize: fontSizes.xLarge,
@@ -33,6 +39,7 @@ const lmt: Style = StyleSheet.create<Style>({
     ...primaryText,
     fontSize: fontSizes.xSmall,
   },
+  secondaryText,
   secondaryTextXLarge: {
     ...secondaryText,
     fontSize: fontSizes.xLarge,
@@ -51,6 +58,27 @@ const lmt: Style = StyleSheet.create<Style>({
   },
   secondaryTextXSmall: {
     ...secondaryText,
+    fontSize: fontSizes.xSmall,
+  },
+  alertText,
+  alertTextXLarge: {
+    ...alertText,
+    fontSize: fontSizes.xLarge,
+  },
+  alertTextLarge: {
+    ...alertText,
+    fontSize: fontSizes.large,
+  },
+  alertTextMedium: {
+    ...alertText,
+    fontSize: fontSizes.medium,
+  },
+  alertTextSmall: {
+    ...alertText,
+    fontSize: fontSizes.small,
+  },
+  alertTextXSmall: {
+    ...alertText,
     fontSize: fontSizes.xSmall,
   },
 })
