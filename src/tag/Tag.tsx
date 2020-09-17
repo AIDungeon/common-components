@@ -27,8 +27,8 @@ const Tag: React.FC<TagProps> = (props) => {
   }
 
   return (
-    <View style={{ flex: 1, flexDirection: 'row' }}>
-      <View style={[styles.tagContainer, { borderColor: textColor }]}>
+    <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center' }}>
+      <View style={[styles.tagContainer, { flex: 1, borderColor: textColor }]}>
         <Text style={textStyle}>{text}</Text>
         {edit && (
           <TouchableOpacity
