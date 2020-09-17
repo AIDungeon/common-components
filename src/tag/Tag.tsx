@@ -31,7 +31,7 @@ const Tag: React.FC<TagProps> = (props) => {
       <Text style={textStyle}>{text}</Text>
       {edit && (
         <TouchableOpacity
-          style={{ paddingTop: 4 }}
+          style={{ flexDirection: 'row', alignItems: 'center' }}
           onPress={() => {
             if (onDelete) onDelete(tag)
           }}
