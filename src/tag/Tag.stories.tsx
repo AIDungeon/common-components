@@ -12,10 +12,9 @@ export default {
 const Template: Story<TagProps> = (args) => {
   return (
     <>
-      <Tag {...args} />
+      <Tag {...args} tag="nsfw" />
       <Tag
         {...args}
-        nsfw={true}
         edit={true}
         onDelete={() =>
           console.log(

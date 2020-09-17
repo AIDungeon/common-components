@@ -7,7 +7,6 @@ import { getTextColors } from '../styles/colors/Colors'
 
 export interface TagProps {
   tag: string
-  nsfw?: boolean
   hash?: boolean
   edit?: boolean
   mode?: string
@@ -15,9 +14,10 @@ export interface TagProps {
 }
 
 const Tag: React.FC<TagProps> = (props) => {
-  const { tag, onDelete, nsfw = false, hash = true, edit = false, mode = 'dark' } = props
+  const { tag, onDelete, hash = true, edit = false, mode = 'dark' } = props
   const styles = getStyles(mode)
   const colors = getTextColors(mode)
+  const nsfw = tag.trim().toLowerCase() === 'nsfw'
 
   const text = hash ? `#${tag}` : tag
   const textColor = nsfw ? colors.alert : colors.secondary
@@ -31,12 +31,12 @@ const Tag: React.FC<TagProps> = (props) => {
       <Text style={textStyle}>{text}</Text>
       {edit && (
         <TouchableOpacity
-          style={{ paddingTop: 1 }}
+          style={{ paddingTop: 4 }}
           onPress={() => {
             if (onDelete) onDelete(tag)
           }}
         >
-          <Icon iconName="close" size={15} mode="light" color={textColor} />
+          <Icon iconName="close" size={18} mode="light" color={textColor} />
         </TouchableOpacity>
       )}
     </View>
