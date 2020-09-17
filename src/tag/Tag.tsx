@@ -27,7 +27,7 @@ const Tag: React.FC<TagProps> = (props) => {
   }
 
   return (
-    <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1, flexDirection: 'row' }}>
       <View style={[styles.tagContainer, { borderColor: textColor }]}>
         <Text style={textStyle}>{text}</Text>
         {edit && (
