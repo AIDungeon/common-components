@@ -24,7 +24,7 @@
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "build": "bob build",
-    "release": "release-it",
+    "release": "npm run build && release-it",
     "example": "cd example && npm run",
     "pods": "cd example && pod-install --quiet",
     "bootstrap": "npm run example && npm install && npm run pods",
