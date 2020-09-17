@@ -27,18 +27,20 @@ const Tag: React.FC<TagProps> = (props) => {
   }
 
   return (
-    <View style={[styles.tagContainer, { borderColor: textColor }]}>
-      <Text style={textStyle}>{text}</Text>
-      {edit && (
-        <TouchableOpacity
-          style={{ flexDirection: 'row', alignItems: 'center' }}
-          onPress={() => {
-            if (onDelete) onDelete(tag)
-          }}
-        >
-          <Icon iconName="close" size={18} mode="light" color={textColor} />
-        </TouchableOpacity>
-      )}
+    <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+      <View style={[styles.tagContainer, { borderColor: textColor }]}>
+        <Text style={textStyle}>{text}</Text>
+        {edit && (
+          <TouchableOpacity
+            style={{ flexDirection: 'row', alignItems: 'center' }}
+            onPress={() => {
+              if (onDelete) onDelete(tag)
+            }}
+          >
+            <Icon iconName="close" size={18} mode="light" color={textColor} />
+          </TouchableOpacity>
+        )}
+      </View>
     </View>
   )
 }

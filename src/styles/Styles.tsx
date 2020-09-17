@@ -21,8 +21,6 @@ const containerStyle: Style = StyleSheet.create<Style>({
     marginBottom: 5,
     paddingVertical: 3,
     paddingHorizontal: 7,
-    width: 'fit-content',
-    maxWidth: 200,
   },
 })
 
