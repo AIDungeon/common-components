@@ -85,7 +85,7 @@
     "react-native-elements": "^2.2.1",
     "react-native-vector-icons": "^7.0.0",
     "react-native-web": "^0.13.12",
-    "release-it": "^13.5.8",
+    "release-it": "^14.0.3",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
