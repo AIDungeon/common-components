@@ -1,6 +1,6 @@
 {
   "name": "latitude-common-components",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "common components",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
